@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430DC9A2274CF69F004EC7F8 /* TipFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430DC9A1274CF69F004EC7F8 /* TipFile.swift */; };
+		430DC9A4274CF6C1004EC7F8 /* TipPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430DC9A3274CF6C1004EC7F8 /* TipPage.swift */; };
 		43137E58274160070099943B /* HealthAvatarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43137E57274160070099943B /* HealthAvatarApp.swift */; };
 		43137E5A274160070099943B /* DataInputPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43137E59274160070099943B /* DataInputPage.swift */; };
 		43137E5C274160090099943B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43137E5B274160090099943B /* Assets.xcassets */; };
 		43137E5F274160090099943B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43137E5E274160090099943B /* Preview Assets.xcassets */; };
 		43137E66274160740099943B /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43137E65274160740099943B /* Onboarding.swift */; };
 		433086CD274BD439001F8618 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433086CC274BD439001F8618 /* ProfilePage.swift */; };
+		4344C41C274CE4E2000E6D89 /* GoalsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4344C41B274CE4E2000E6D89 /* GoalsPage.swift */; };
 		4354663F274A61590007CD47 /* RecommendationsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354663E274A61590007CD47 /* RecommendationsPage.swift */; };
 		435A39252747F9A0009803BC /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A39242747F9A0009803BC /* HomePage.swift */; };
 		435A3927274805DE009803BC /* AvatarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A3926274805DE009803BC /* AvatarPage.swift */; };
-		435A3929274807E8009803BC /* GoalsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A3928274807E8009803BC /* GoalsPage.swift */; };
+		435A3929274807E8009803BC /* GoalsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A3928274807E8009803BC /* GoalsModel.swift */; };
 		435A392C274809FF009803BC /* AvatarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A392B274809FF009803BC /* AvatarModel.swift */; };
 		436C51E82749368C0089D8EC /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436C51E72749368C0089D8EC /* ProfileModel.swift */; };
 		43ACE4E32743BC360038F1DB /* DataInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ACE4E22743BC360038F1DB /* DataInputModel.swift */; };
@@ -24,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		430DC9A1274CF69F004EC7F8 /* TipFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipFile.swift; sourceTree = "<group>"; };
+		430DC9A3274CF6C1004EC7F8 /* TipPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipPage.swift; sourceTree = "<group>"; };
+		4311551A274CF1F300255473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4311551C274CF27E00255473 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		43137E54274160070099943B /* HealthAvatar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthAvatar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43137E57274160070099943B /* HealthAvatarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthAvatarApp.swift; sourceTree = "<group>"; };
 		43137E59274160070099943B /* DataInputPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputPage.swift; sourceTree = "<group>"; };
@@ -31,10 +38,11 @@
 		43137E5E274160090099943B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		43137E65274160740099943B /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		433086CC274BD439001F8618 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		4344C41B274CE4E2000E6D89 /* GoalsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsPage.swift; sourceTree = "<group>"; };
 		4354663E274A61590007CD47 /* RecommendationsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsPage.swift; sourceTree = "<group>"; };
 		435A39242747F9A0009803BC /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		435A3926274805DE009803BC /* AvatarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPage.swift; sourceTree = "<group>"; };
-		435A3928274807E8009803BC /* GoalsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsPage.swift; sourceTree = "<group>"; };
+		435A3928274807E8009803BC /* GoalsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsModel.swift; sourceTree = "<group>"; };
 		435A392B274809FF009803BC /* AvatarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarModel.swift; sourceTree = "<group>"; };
 		436C51E72749368C0089D8EC /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		43ACE4E22743BC360038F1DB /* DataInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputModel.swift; sourceTree = "<group>"; };
@@ -52,11 +60,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4311551B274CF27E00255473 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4311551C274CF27E00255473 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		43137E4B274160070099943B = {
 			isa = PBXGroup;
 			children = (
 				43137E56274160070099943B /* HealthAvatar */,
 				43137E55274160070099943B /* Products */,
+				4311551B274CF27E00255473 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,11 +88,15 @@
 		43137E56274160070099943B /* HealthAvatar */ = {
 			isa = PBXGroup;
 			children = (
+				4311551A274CF1F300255473 /* Info.plist */,
 				43137E57274160070099943B /* HealthAvatarApp.swift */,
 				43ACE4E22743BC360038F1DB /* DataInputModel.swift */,
 				435A392B274809FF009803BC /* AvatarModel.swift */,
 				43AD41492746FFA800CB6B6C /* RecommendationsModel.swift */,
 				436C51E72749368C0089D8EC /* ProfileModel.swift */,
+				435A3928274807E8009803BC /* GoalsModel.swift */,
+				430DC9A1274CF69F004EC7F8 /* TipFile.swift */,
+				430DC9A3274CF6C1004EC7F8 /* TipPage.swift */,
 				435A392A274808D8009803BC /* MainViews */,
 				43137E5B274160090099943B /* Assets.xcassets */,
 				43137E5D274160090099943B /* Preview Content */,
@@ -99,7 +120,7 @@
 				435A39242747F9A0009803BC /* HomePage.swift */,
 				43137E59274160070099943B /* DataInputPage.swift */,
 				435A3926274805DE009803BC /* AvatarPage.swift */,
-				435A3928274807E8009803BC /* GoalsPage.swift */,
+				4344C41B274CE4E2000E6D89 /* GoalsPage.swift */,
 				4354663E274A61590007CD47 /* RecommendationsPage.swift */,
 			);
 			path = MainViews;
@@ -178,11 +199,14 @@
 				43137E66274160740099943B /* Onboarding.swift in Sources */,
 				43137E5A274160070099943B /* DataInputPage.swift in Sources */,
 				435A392C274809FF009803BC /* AvatarModel.swift in Sources */,
+				430DC9A2274CF69F004EC7F8 /* TipFile.swift in Sources */,
 				43ACE4E32743BC360038F1DB /* DataInputModel.swift in Sources */,
 				435A39252747F9A0009803BC /* HomePage.swift in Sources */,
-				435A3929274807E8009803BC /* GoalsPage.swift in Sources */,
+				435A3929274807E8009803BC /* GoalsModel.swift in Sources */,
+				4344C41C274CE4E2000E6D89 /* GoalsPage.swift in Sources */,
 				433086CD274BD439001F8618 /* ProfilePage.swift in Sources */,
 				436C51E82749368C0089D8EC /* ProfileModel.swift in Sources */,
+				430DC9A4274CF6C1004EC7F8 /* TipPage.swift in Sources */,
 				43AD414A2746FFA800CB6B6C /* RecommendationsModel.swift in Sources */,
 				4354663F274A61590007CD47 /* RecommendationsPage.swift in Sources */,
 				435A3927274805DE009803BC /* AvatarPage.swift in Sources */,
@@ -320,9 +344,11 @@
 				DEVELOPMENT_TEAM = 7TD72JJG8D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HealthAvatar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +360,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -349,9 +375,11 @@
 				DEVELOPMENT_TEAM = 7TD72JJG8D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HealthAvatar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,7 +391,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

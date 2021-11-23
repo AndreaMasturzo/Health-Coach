@@ -33,12 +33,14 @@ struct HomePage: View {
             }.tag(2)
         }
         .toolbar{
-            Button(action: {presentProfileSheet.toggle()}) {
-                Image(systemName:"person.circle.fill")
-                    .font(.system(.title2))
-                    .padding(.top)
-                    .sheet(isPresented: $presentProfileSheet, content: {ProfilePage()})
-            }
+            Button(action: {
+                presentProfileSheet.toggle()
+            }, label: {
+                Image(systemName: "person.circle.fill")
+            })
+                .sheet(isPresented: $presentProfileSheet, content: {
+                    ProfilePage()
+                })
     }
         .navigationBarBackButtonHidden(true)  // Hiding the back button because user is not supposed to go back from here
     }

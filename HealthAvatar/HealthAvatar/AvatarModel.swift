@@ -16,7 +16,7 @@ public struct ShownAvatar: View {
         Image(newAvatar)
             .resizable()
             .frame(width: 300, height: 300)
-            .onTapGesture {
+            .onAppear {
                 newAvatar = UserDefaults.standard.string(forKey: "avatar")!
             }
     }

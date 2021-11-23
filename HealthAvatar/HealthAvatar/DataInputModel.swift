@@ -11,7 +11,7 @@ import SwiftUI
 // A structure to manage the selection of the avatar and its picker
 public struct ImageInput : View {
     
-    var avatars = ["HalfAvatar1", "HalfAvatar2", "HalfAvatar3", "HalfAvatar4", "HalfAvatar5", "HalfAvatar6", "HalfAvatar7", "HalfAvatar8"]
+    var avatars = ["HalfAvatar1", "HalfAvatar2", "HalfAvatar3", "HalfAvatar4"]
     @State var selectedAvatar: String? = nil
     
     public var body: some View {

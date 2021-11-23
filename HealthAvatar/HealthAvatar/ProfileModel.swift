@@ -10,7 +10,7 @@ import SwiftUI
 
 public struct AvatarChange : View {
     
-    var avatars = ["HalfAvatar1", "HalfAvatar2", "HalfAvatar3", "HalfAvatar4", "HalfAvatar5", "HalfAvatar6", "HalfAvatar7", "HalfAvatar8"]
+    var avatars = ["HalfAvatar1", "HalfAvatar2", "HalfAvatar3", "HalfAvatar4"]
     @State var newSelectedAvatar: String? = nil
     
     public var body: some View {
@@ -73,16 +73,17 @@ struct ProfileModel: View {
                 AvatarChange()
             }
             
-                                .toolbar {
-                                    Button(action: {
-                                        
-                                    }, label: {
-                                        Text("Save")
-                                    })
-                                }
+            .toolbar {
+                Button(action: {
+                    
+                }, label: {
+                    Text("Save")
+                })
+            }
         }
-        
-        
     }
+    
+    
 }
+
 

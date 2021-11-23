@@ -3,7 +3,7 @@ import SwiftUI
 struct DataInputPage: View {
     
     // var to present the Onboarding View
-    @AppStorage("onboarding") var presentSheetView = false
+    @AppStorage("onboarding") var presentSheetView = true
     
     var body: some View {
         
@@ -14,9 +14,7 @@ struct DataInputPage: View {
                 
                 Spacer()
                 // To make the onboarding View appear (as a sheet view)
-                .onAppear(perform: {
-                    presentSheetView = true
-                })
+                
                 .sheet(isPresented: $presentSheetView,content: {Onboarding(isPresented: $presentSheetView)})
             }
             .navigationTitle(Text("Getting Started"))

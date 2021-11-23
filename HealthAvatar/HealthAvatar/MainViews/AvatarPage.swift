@@ -9,8 +9,6 @@ import Foundation
 import SwiftUI
 
 struct AvatarPage: View {
-    // var to present the sheet view Profile
-    @State private var presentProfileSheet = false
     
     var body: some View {
         
