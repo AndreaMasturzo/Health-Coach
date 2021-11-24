@@ -30,60 +30,148 @@ public struct NewSelectionCell: View {
     public var body: some View {
         HStack {
             Image(avatar)
-            Spacer()
-            if avatar == newSelectedAvatar {
-                Image(systemName: "checkmark.circle.fill")
-                    .font(.system(size: 60))
-                    .foregroundColor(.accentColor)
-            }
-        }   .onTapGesture {
+        }
+        .frame(width: 370, height: 200, alignment: .center)
+        .onTapGesture {
             self.newSelectedAvatar = self.avatar
             UserDefaults.standard.set(self.avatar, forKey: "avatar")
         }
     }
 }
 
+//HStack {
+//    Text(recommendation)
+//        .foregroundColor(.secondary)
+//
+//    Spacer()
+//
+//    if inEditMode == true {
+//
+//    TextField("", text: $result1)
+//        .multilineTextAlignment(.center)
+//        .keyboardType(.numberPad)
+//    } else {
+//        Text(result1)
+//            .foregroundColor(.gray)
+//            .multilineTextAlignment(.center)
+//    }
+//}
 
 
-struct ProfileElement: View {
+struct ProfileElement1: View {
+    @Binding var editing: Bool
     var labelText: String
-    var textValue: String
+    @AppStorage("profileName")var nameValue: String = ""
     
     var body: some View {
         HStack {
             Text(labelText)
                 .foregroundColor(.secondary)
             Spacer()
-            Text(textValue)
+            if editing == true {
+                TextField("", text: $nameValue)
+            } else {
+                Text(nameValue)
+                    .foregroundColor(.gray)
+            }
         }
     }
 }
 
-struct ProfileModel: View {
+struct ProfileElement2: View {
+    @Binding var editing: Bool
+    var labelText: String
+    @AppStorage("profileAge")var ageValue: String = ""
+    
     var body: some View {
-        
-        
-        VStack {
-            Form {
-                ProfileElement(labelText: "Name", textValue: "\(UserDefaults.standard.string(forKey: "name")!)")
-                ProfileElement(labelText: "Age", textValue: "\(UserDefaults.standard.string(forKey: "age")!)")
-                ProfileElement(labelText: "Gender", textValue: "\(UserDefaults.standard.string(forKey: "gender")!)")
-                ProfileElement(labelText: "Height", textValue: "\(UserDefaults.standard.string(forKey: "height")!)")
-                ProfileElement(labelText: "Weight", textValue: "\(UserDefaults.standard.string(forKey: "weight")!)")
-                AvatarChange()
-            }
-            
-            .toolbar {
-                Button(action: {
-                    
-                }, label: {
-                    Text("Save")
-                })
+        HStack {
+            Text(labelText)
+                .foregroundColor(.secondary)
+            Spacer()
+            if editing == true {
+                TextField("", text: $ageValue)
+                    .keyboardType(.numberPad)
+            } else {
+                Text(ageValue)
+                    .foregroundColor(.gray)
             }
         }
     }
-    
-    
 }
+
+struct ProfileElement3: View {
+    @Binding var editing: Bool
+    var labelText: String
+    @AppStorage("profileGender")var genderValue: String = ""
+    
+    let genders = ["Male", "Female", "Non Binary", "Prefer not to say"]
+    
+    var body: some View {
+        HStack {
+            Text(labelText)
+                .foregroundColor(.secondary)
+            Spacer()
+            if editing == true {
+                TextField("", text: $genderValue)
+            } else {
+                Text(genderValue)
+                    .foregroundColor(.gray)
+            }
+        }
+    }
+}
+
+struct ProfileElement4: View {
+    @Binding var editing: Bool
+    var labelText: String
+    @AppStorage("profileHeight")var heightValue: String = ""
+    
+    var body: some View {
+        HStack {
+            Text(labelText)
+                .foregroundColor(.secondary)
+            Spacer()
+            if editing == true {
+                TextField("", text: $heightValue)
+                    .keyboardType(.numberPad)
+            } else {
+                Text(heightValue)
+                    .foregroundColor(.gray)
+            }
+            Text("cm")
+                .foregroundColor(.secondary)
+        }
+    }
+}
+
+struct ProfileElement5: View {
+    @Binding var editing: Bool
+    var labelText: String
+    @AppStorage("profileWeight")var weightValue: String = ""
+    
+    var body: some View {
+        HStack {
+            Text(labelText)
+                .foregroundColor(.secondary)
+            Spacer()
+            if editing == true {
+                TextField("", text: $weightValue)
+                    .keyboardType(.numberPad)
+            } else {
+                Text(weightValue)
+                    .foregroundColor(.gray)
+            }
+            Text("Kg")
+                .foregroundColor(.secondary)
+        }
+    }
+}
+
+
+
+
+    
+    
+
 
 

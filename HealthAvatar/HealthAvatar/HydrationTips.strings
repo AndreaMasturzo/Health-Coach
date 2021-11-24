@@ -1,0 +1,26 @@
+[
+    {
+        "text": "Which drinks are preferable to fulfill hydration level?",
+        "children": [
+            {
+                "text": "Water is preferred. Other beverages without added sugar, alcohol or caffeine might be considered."
+            }
+        ]
+    },
+    {
+        "text": "When more water consumption is required?",
+        "children": [
+            {
+                "text": "Warm weather, after sports or heavy physical effort, after a long time with heating, during pregnancy and breastfeeding periods, fever, diarrhoea, vomiting, when eating high-fibre foods."
+            }
+        ]
+    },
+   {
+        "text": "Which drinking regime is preferable?",
+        "children": [
+            {
+                "text": "Drink slowly, frequently, in small quantities. Always have water within arm's reach, do not wait until you feel thirsty."
+            }
+        ]
+    }
+]

@@ -69,7 +69,7 @@ struct Onboarding: View {
             
             // Composition of elements
             VStack {
-                OnboardingElement(titleText: "Your Avatar", image: Image(systemName: "person.fill"), subtitleText: "Create an avatar that will guide you troughout your journey")
+                OnboardingElement(titleText: "Your Coah", image: Image(systemName: "person.fill"), subtitleText: "Choose a coach that will guide you troughout your journey")
                 
                 OnboardingElement(titleText: "Habits", image: Image(systemName: "heart.circle.fill"), subtitleText: "Get recommendations based on the World Health Organizations (WHO)")
                 

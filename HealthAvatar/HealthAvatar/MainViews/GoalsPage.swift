@@ -11,12 +11,14 @@ import SwiftUI
 struct GoalsPage: View {
     var body: some View {
         ScrollView {
-            GoalsCard(cardText: "Hydration", cardImage: "Hydratation")
-            GoalsCard(cardText: "Nutrition", cardImage: "Nutrition")
-            GoalsCard(cardText: "Sleep", cardImage: "Sleep")
+            GoalsCard1(cardText: "Hydration", cardImage: "Hydratation")
+            GoalsCard2(cardText: "Nutrition", cardImage: "Nutrition")
+            GoalsCard3(cardText: "Sleep", cardImage: "Sleep")
             
         }
+        .frame(width: 300, height: 750)
         .padding()
+        .navigationBarHidden(true)
     }
 }
 

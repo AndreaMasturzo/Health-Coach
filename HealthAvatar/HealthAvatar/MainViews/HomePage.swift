@@ -22,27 +22,22 @@ struct HomePage: View {
     var body: some View {
         // All the code to manage the tab view and its buttons
         TabView() {
-           AvatarPage().tabItem {
-                Image(systemName: "person.fill")
+           GoalsPage().tabItem {
+                Image(systemName: "target")
                 Text("Goals")
-            }.tag(1)
-            
-            GoalsPage().tabItem {
-                Image(systemName: "gift")
-                Text("Rewards")
             }.tag(2)
+            
+            AvatarPage().tabItem {
+                Image(systemName: "person.fill")
+                Text("Coach")
+            }.tag(1)
+            ProfilePage().tabItem {
+                Image(systemName: "gearshape.2.fill")
+                Text("Profile")
+            }.tag(3)
         }
-        .toolbar{
-            Button(action: {
-                presentProfileSheet.toggle()
-            }, label: {
-                Image(systemName: "person.circle.fill")
-            })
-                .sheet(isPresented: $presentProfileSheet, content: {
-                    ProfilePage()
-                })
-    }
-        .navigationBarBackButtonHidden(true)  // Hiding the back button because user is not supposed to go back from here
+        .navigationBarHidden(true)
+          // Hiding the back button because user is not supposed to go back from here
     }
 }
 

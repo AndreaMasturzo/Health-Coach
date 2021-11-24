@@ -32,13 +32,9 @@ public struct SelectionCell: View {
     public var body: some View {
         HStack {
             Image(avatar)
-            Spacer()
-            if avatar == selectedAvatar {
-                Image(systemName: "checkmark.circle.fill")
-                    .font(.system(size: 60))
-                    .foregroundColor(.accentColor)
-            }
-        }   .onTapGesture {
+        }
+        .frame(width: 370, height: 200, alignment: .center)
+        .onTapGesture {
             self.selectedAvatar = self.avatar
             UserDefaults.standard.set(self.avatar, forKey: "avatar")
         }
@@ -47,13 +43,12 @@ public struct SelectionCell: View {
 
 
 // The all struct to input user data
-public struct DataInput : View {
-    
-    @AppStorage("name") var name: String = ""
-    @AppStorage("gender") var gender : String = ""
-    @AppStorage("age") var age = ""
-    @AppStorage("height") var height =  ""
-    @AppStorage("weight") var weight = ""
+public struct DataInput : View {    
+    @AppStorage("profileName") var name: String = ""
+    @AppStorage("profileGender") var gender : String = ""
+    @AppStorage("profileAge") var age = ""
+    @AppStorage("profileHeight") var height =  ""
+    @AppStorage("profileWeight") var weight = ""
     @State var selectedGender = UserDefaults.standard.string(forKey: "selectedGender")
     @AppStorage("avatar") var avatar = ""
     
@@ -61,51 +56,68 @@ public struct DataInput : View {
     
     public var body: some View {
         
-            VStack {
-                Form {
-                    Section(header: Text("Profile")) {
-                        TextField(text: $name, prompt: Text("Name"), label: {})
+        VStack {
+            Form {
+                Section(header: Text("Profile")) {
+                    HStack {
+                        Text("Name")
+                        Spacer()
+                        TextField("", text: $name, prompt: Text("Type..."))
+                            .multilineTextAlignment(.trailing)
                             .disableAutocorrection(true)
-                        
-                        Picker("Gender", selection: $gender) {
-                            ForEach(genders, id: \.self) { gender in
-                                Text("\(gender)")
-                            }
-                        }
-                        
-                        TextField(text: $age, prompt: Text("Age"), label: {Text("yess")})
-                            .keyboardType(.numberPad)
-
-                        TextField(text: $height, prompt: Text("Height"), label: {})
-                            .keyboardType(.numberPad)
-                        
-                        TextField(text: $weight, prompt: Text("Weight"), label: {})
-                            .keyboardType(.numberPad)
-
                     }
-                    Section {
-                        HStack {
-                            Spacer()
-                            ImageInput()  // Structure on top of this page
-                            Spacer()
+                    Picker("Gender", selection: $gender) {
+                        ForEach(genders, id: \.self) { gender in
+                            Text("\(gender)")
                         }
+                    }
+                    HStack {
+                        Text("Age")
+                        Spacer()
+                        TextField("", text: $age, prompt: Text("Type..."))
+                            .multilineTextAlignment(.trailing)
+                            .keyboardType(.numberPad)
+                    }
+                    HStack {
+                        Text("Height")
+                        Spacer()
+                        TextField("", text: $height, prompt: Text("Type..."))
+                            .multilineTextAlignment(.trailing)
+                            .keyboardType(.numberPad)
+                        Text("cm")
+                    }
+                    HStack {
+                        Text("Weight")
+                        Spacer()
+                        TextField("", text: $weight, prompt: Text("Type..."))
+                            .multilineTextAlignment(.trailing)
+                            .keyboardType(.numberPad)
+                        Text("kg")
                     }
                 }
-                .cornerRadius(10)
-                
-                NavigationLink(destination: RecommendationsPage(), label: {
-                    buttonConfig(text: "Done")  // buttonConfig declared inside Onboarding
-                })
-                    .foregroundColor(.blue)
-                    .onTapGesture {
-                        UserDefaults.standard.set(self.name, forKey: "name")                   // This should set data to be stored
-                        UserDefaults.standard.set(self.selectedGender, forKey: "gender")
-                        UserDefaults.standard.set(self.age, forKey: "age")
-                        UserDefaults.standard.set(self.height, forKey: "height")
-                        UserDefaults.standard.set(self.weight, forKey: "weight")
+                Section {
+                    HStack {
+                        Spacer()
+                        ImageInput()  // Structure on top of this page
+                        Spacer()
                     }
+                }
             }
-            .padding()
+            .cornerRadius(10)
+            
+            NavigationLink(destination: RecommendationsPage(), label: {
+                buttonConfig(text: "Done")  // buttonConfig declared inside Onboarding
+            })
+                .foregroundColor(.blue)
+                .onTapGesture {
+                    UserDefaults.standard.set(self.name, forKey: "profileName")                   // This should set data to be stored
+                    UserDefaults.standard.set(self.selectedGender, forKey: "profileGender")
+                    UserDefaults.standard.set(self.age, forKey: "profileAge")
+                    UserDefaults.standard.set(self.height, forKey: "profileHeight")
+                    UserDefaults.standard.set(self.weight, forKey: "profileWeight")
+                }
+        }
+        .padding()
     }
 }
 

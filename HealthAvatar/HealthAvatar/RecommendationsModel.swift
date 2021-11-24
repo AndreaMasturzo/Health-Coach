@@ -9,15 +9,80 @@ import Foundation
 import SwiftUI
 
 // Single element to be put inside the model
-public struct RecommendationElement: View {
+public struct RecommendationElement1: View {
+    @Binding var inEditMode: Bool
     var recommendation: String
-    var result: String
+    @AppStorage("result1") var result1: String = ""
     
     public var body: some View {
         HStack {
             Text(recommendation)
+                .foregroundColor(.secondary)
+
             Spacer()
-            Text(result)
+            
+            if inEditMode == true {
+
+            TextField("", text: $result1)
+                .multilineTextAlignment(.center)
+                .keyboardType(.numberPad)
+            } else {
+                Text(result1)
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
+            }
+        }
+    }
+}
+
+public struct RecommendationElement2: View {
+    @Binding var inEditMode: Bool
+    var recommendation: String
+    @AppStorage("result2") var result2: String = ""
+    
+    public var body: some View {
+        HStack {
+            Text(recommendation)
+                .foregroundColor(.secondary)
+
+            Spacer()
+            
+            if inEditMode == true {
+
+            TextField("", text: $result2)
+                .multilineTextAlignment(.center)
+                .keyboardType(.numberPad)
+            } else {
+                Text(result2)
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
+            }
+        }
+    }
+}
+
+public struct RecommendationElement3: View {
+    @Binding var inEditMode: Bool
+    var recommendation: String
+    @AppStorage("result3") var result3: String = ""
+    
+    public var body: some View {
+        HStack {
+            Text(recommendation)
+                .foregroundColor(.secondary)
+
+            Spacer()
+            
+            if inEditMode == true {
+
+            TextField("", text: $result3)
+                .multilineTextAlignment(.center)
+                .keyboardType(.numberPad)
+            } else {
+                Text(result3)
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
+            }
         }
     }
 }
@@ -25,63 +90,17 @@ public struct RecommendationElement: View {
 // The button to edit data inside RecommendationsModel !FUNCTIONALITY TO ADD!
 public struct RecommendationsEdit: View {
     public var body: some View {
-            HStack {
+        HStack {
+            Spacer()
+            VStack(alignment: .center) {
                 Spacer()
-                VStack(alignment: .center) {
-                    Button(action: {}, label: {Text("Edit")})
-                        .padding(.bottom)
-                    Spacer()
-                    Text("Standard recommendations are based on WHO").font(.custom("SFCompact", size: 15)).foregroundColor(.gray)
-                    Spacer()
-                }
+                Text("Standard recommendations are based on WHO").font(.custom("SFCompact", size: 15)).foregroundColor(.gray)
                 Spacer()
             }
-            .listRowInsets(EdgeInsets())
-            .background(Color(UIColor.systemGroupedBackground))
-    }
-}
-
-// Model to manage data shown into RecommendationsPage
-struct RecommendationsModel: View {
-    @State var drink = ""
-    @State var eat = ""
-    @State var sleep = ""
-    
-    var body: some View {
-        
-        NavigationView {
-            VStack {
-                Image("\(UserDefaults.standard.string(forKey: "avatar")!)")
-                // To add the funcionality that shows selected avatar
-                
-                Form {
-                    Section(header: Text("Recommendations")) {
-                        RecommendationElement(recommendation: "Drink", result: "2L per day")
-                        RecommendationElement(recommendation: "Sleep", result: "8h per day")
-                        RecommendationElement(recommendation: "Steps", result: "10000 per day")
-                    }
-                // This code allows text and button to be shown inside the form without the blank space 
-                HStack {
-                    Spacer()
-                    VStack(alignment: .center) {
-                        Button(action: {}, label: {Text("Edit")})
-                            .padding(.bottom)
-                        Spacer()
-                        Text("Standard recommendations are based on WHO").font(.custom("SFCompact", size: 15)).foregroundColor(.gray) // Change this text
-                        Spacer()
-                    }
-                    Spacer()
-                }
-                .listRowInsets(EdgeInsets())
-                .background(Color(UIColor.systemGroupedBackground))
-                }
-            }
+            Spacer()
         }
+        .listRowInsets(EdgeInsets())
+        .background(Color(UIColor.systemGroupedBackground))
     }
 }
 
-struct RecommendationsModel_Previews: PreviewProvider {
-    static var previews: some View {
-        RecommendationsModel()
-    }
-}
